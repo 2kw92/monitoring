@@ -15,8 +15,8 @@ enabled=1
 ...
 ```      
 Устанавливаем пакеты веб-интерфейса:       
-```yum install centos-release-scl```
-```yum install zabbix-web-pgsql-scl zabbix-apache-conf-scl -y```
+```yum install centos-release-scl```     
+```yum install zabbix-web-pgsql-scl zabbix-apache-conf-scl -y```      
 Далее нам необходимо развернуть БД. Я выбрал postgres:        
 ```
 https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
@@ -31,10 +31,10 @@ yum install postgresql12-server postgresql12 -y
 Создаем юзера:      
 ```createuser --pwprompt zabbix```
 Создаем бд:       
-```createdb -O zabbix zabbix```
+```createdb -O zabbix zabbix```      
 Далее от имени root импортируем начальную схему и данные:     
 ```zcat /usr/share/doc/zabbix-server-pgsql*/create.sql.gz | sudo -u zabbix psql zabbix```        
-Настриваем бд. Для этого редактируем файл /etc/zabbix/zabbix_server.conf
+Настриваем бд. Для этого редактируем файл /etc/zabbix/zabbix_server.conf      
 ```DBPassword=zabbix```      
 Настраиваем PHP для веб-интерфейса.Файл /etc/opt/rh/rh-php72/php-fpm.d/zabbix.conf, раскомментируем        
 строку и укажем свой часовой пояс:       
