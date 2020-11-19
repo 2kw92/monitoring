@@ -53,6 +53,12 @@ yum install postgresql12-server postgresql12 -y
 строку и укажем свой часовой пояс:       
 ```php_value[date.timezone] = Europe/Moscow```      
       
+После этого запускаем сервер агент и веб-интерфейс:            
+```
+systemctl restart zabbix-server zabbix-agent httpd rh-php72-php-fpm
+systemctl enable zabbix-server zabbix-agent httpd rh-php72-php-fpm
+```      
+     
 Далее заходим в веб-интерфейс. Для виртуалки приложенной к дз это:      
 ```http://192.168.11.101/zabbix/```
           
