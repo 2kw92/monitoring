@@ -64,4 +64,6 @@ systemctl enable zabbix-server zabbix-agent httpd rh-php72-php-fpm
           
 И производим настройки. После этого настраиваем дашборды в разделе screen.      
         
-![alt text](https://github.com/2kw92/monitoring/blob/main/1.PNG?raw=true)
+![alt text](https://github.com/2kw92/monitoring/blob/main/1.PNG?raw=true)       
+          
+![alt text](https://github.com/2kw92/monitoring/blob/main/2.PNG?raw=true)      
